@@ -120,22 +120,21 @@ Due to the Ephimeral file system of Heroku, currently the admin panel doesn't su
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-In case you wish to update existing Heroku deployment with a new theme, follow steps 1 - 3 and then do the steps mentioned in [Updating the source code](https://github.com/vyronarediano/slp-on-heroku#updating-source-code)
+You can find your new theme in the Ghost admin panel.
+
+In case you wish to **update existing Heroku deployment** with a new theme, follow steps 1 - 3 and then do the steps mentioned in [Updating the source code](https://github.com/vyronarediano/slp-on-heroku#updating-source-code)
 
 ## Updating source code
 
-Optionally after deployment, to push Ghost upgrades or work with source code, clone this repo (or a fork) and connect it with the Heroku app:
+Optionally after deployment, to push Ghost upgrades or work with source code, fork this repository and make required changes.
 
+**Connect the app to your Heroku deployment:** 
 ```bash
-git clone https://github.com/snathjr/ghost-on-heroku
-cd ghost-on-heroku
-
 heroku git:remote -a YOURAPPNAME
 heroku info
 ```
 
 Then you can push commits to the Heroku app, triggering new deployments:
-
 ```bash
 git add .
 git commit -m "Important changes"
