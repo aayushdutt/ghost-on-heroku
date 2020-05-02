@@ -106,6 +106,22 @@ This repository is a [Node.js](https://nodejs.org) web application that specifie
 - Versions are locked and managed using [npm](https://www.npmjs.com/)
 - Scales across processor cores in larger dynos via [Node cluster API](https://nodejs.org/dist/latest-v10.x/docs/api/cluster.html)
 
+
+## Using a new theme
+
+Due to the Ephimeral file system of Heroku, currently the admin panel doesn't support uploading the themes directly. If uploaded, the theme would go missing after some time. The only way to use custom theme currently is to commit your themes in the code files and then re publish the application.
+
+**To use a new theme follow these steps**
+
+1. Fork and clone this repository
+2. Extract and copy your theme folder in content/themes. If your theme is `Editorial` it should look like `content/themes/Editorial/...`
+3. Push the change
+4. Deploy to Heroku by clicking the button below
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+In case you wish to update existing Heroku deployment with a new theme, follow steps 1 - 3 and then do the steps mentioned in [Updating the source code](https://github.com/vyronarediano/slp-on-heroku#updating-source-code)
+
 ## Updating source code
 
 Optionally after deployment, to push Ghost upgrades or work with source code, clone this repo (or a fork) and connect it with the Heroku app:
